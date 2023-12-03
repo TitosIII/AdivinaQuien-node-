@@ -189,9 +189,12 @@ socket.on("Victory", (rivalCharacter) => {
 
 socket.on("FailedGuess", (guessed) => {
   const string = `<li class='other'>Predicción fallida : ${guessed}</li>`;
-  if (guessed != guessInput.value) {
+  if (guessed != guessInput.value.toLowerCase()) {
+    console.log("Me toca");
     questionsPlayer.innerHTML += string;
+    questionModal.style.display = "flex";
   } else {
     questionsRival.innerHTML += string;
+    guessInput.value = "";
   }
 });
