@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    padding: 0;
+}
+
+#player{
+    background-color: red;
+    color: black;
+    position: fixed;
+    top: 15px;
+    left: 30px;
+    bottom: 15px;
+    width: 45%;
+    border-radius: 15px;
+    text-align: center;
+    place-items: center;
+}
+
+#rival{
+    background-color: gray;
+    color: black;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    bottom: 15px;
+    width: 45%;
+    text-align: center;
+    border-radius: 15px;
+    place-items: center;
+}
+
+.questionsList{
+    background-color: white;
+    border-width: 3px;
+    border-radius: 10px;
+    position: inherit relative;
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    align-self: end;
+}
+
+.modal{
+    background-color: #111111bd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.modal-container{
+    background-color: white;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    max-width: 450px;
+    padding: 30px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}
+
+input{
+    margin: 3px;
+    padding: 5px;
+    width: 90%;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+button{
+    border-radius: 15px;
+    margin: 3px;
+    padding: 5px;
+    color: white;
+    width: 40%;
+    max-width: 150px;
+}
+
+.accept{
+    background-color: green;
+}
+
+.cancel{
+    background-color: red;
+}
+
+.other{
+    background-color: gray;
+    color: white;
+}
+
+.guess{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: purple;
+}
+
+.true {
+    background-color: green;
+}
+
+.false {
+    background-color: red;
+}
+
+.other {
+    background-color: gray;
+    color: white;
+}

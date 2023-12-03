@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Adivina Quién</title>
+  </head>
+  <body>
+    <div id="player">
+      <h1 class="userName" id="name1">Jugador 1</h1>
+      <h2 id="character1">Personaje: ???</h2>
+      <h2 id="playerState">Conentándose...</h2>
+      <div class="questionsList">
+        <ul id="questionsPlayer"></ul>
+      </div>
+    </div>
+
+    <div id="rival">
+      <h1 class="userName" id="name2">...</h1>
+      <h2 id="character2">Personaje: ???</h2>
+      <h2 id="rivalState">Buscando oponente...</h2>
+      <div class="questionsList">
+        <ul id="questionsRival"></ul>
+      </div>
+    </div>
+
+    <!--Modals-->
+    <div class="modal" id="setName">
+      <div class="modal-container">
+        <h1>Adivina Quién</h1>
+        <form id="nameForm">
+          <input
+            id="name"
+            type="text"
+            placeholder="Ingresa tu nombre de usuario."
+          />
+          <button class="accept">JUGAR</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="setCharacter">
+      <div class="modal-container">
+        <form id="characterForm">
+          <input
+            id="character"
+            type="text"
+            placeholder="Ingresa tu personaje."
+          />
+          <button class="accept">JUGAR</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="answerModal">
+      <div class="modal-container">
+        <h1>Pregunta:</h1>
+        <h3 id="question">Una Pregunta</h3>
+        <button class="cancel" id="false">Falso.</button>
+        <button class="accept" id="true">Verdadero.</button>
+        <button class="other" id="other">No lo sé...</button>
+      </div>
+    </div>
+
+    <div class="modal" id="questionModal">
+      <div class="modal-container">
+        <form id="questionForm">
+          <input
+            id="questionInput"
+            type="text"
+            placeholder="Ingresa tu pregunta."
+          />
+          <button class="accept">Enviar</button>
+        </form>
+        <button class="guess" id="guess">¡¡¡Adivinar!!!</button>
+      </div>
+    </div>
+
+    <div class="modal" id="guessModal">
+      <div class="modal-container">
+        <form id="guessForm">
+          <input
+            id="guessInput"
+            type="text"
+            placeholder="Adivina el personaje del contrincante."
+          />
+          <button class="guess">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="resultsModal">
+      <div class="modal-container">
+        <h1 id="titleResult">Has perdido...</h1>
+        <h2 id="descResult">Tu contrincante ha adivinado tu personaje...</h2>
+      </div>
+    </div>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/socketConfig.js"></script>
+  </body>
+</html>
